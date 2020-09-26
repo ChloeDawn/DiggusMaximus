@@ -67,7 +67,7 @@ class Excavate {
         if (((ServerPlayerEntity) player).interactionManager.tryBreakBlock(pos)) {
             points.add(pos);
             mined++;
-            if (DiggusMaximusMod.getOptions().autoPickup)
+            if (startID != null && DiggusMaximusMod.getOptions().autoPickup)
                 ExcavateHelper.pickupDrops(world, pos, player);
         }
     }
